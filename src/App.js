@@ -6,10 +6,12 @@ import FounderSection from './components/FounderSection';
 import TeamSection from './components/TeamSection';
 import BlogCardsSection from './components/BlogCardsSection';
 import Footer from './components/Footer';
+import EllipseBackground from './components/EllipseBackground';
 
 function App() {
   return (
     <div className="App">
+      <EllipseBackground />
       <Header />
       <HeroSection />
       <MissionSection />
