@@ -1,11 +1,11 @@
 import React from 'react';
+import Logo from '../assets/Logo.png'; // Adjust path if needed
 
 function Header() {
   return (
     <header className="ve-header">
       <div className="ve-logo">
-        <span className="ve-logo-main">VIRTUAL</span>
-        <span className="ve-logo-highlight">ENVI</span>
+        <img src={Logo} alt="VirtualEnvi Logo" style={{ height: '60px' }} />
       </div>
       <nav className="ve-nav">
         <a href="#">Home</a>

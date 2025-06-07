@@ -1,4 +1,5 @@
 import React from 'react';
+import HeroImg from '../assets/image 9.png';
 
 function HeroSection() {
   return (
@@ -12,7 +13,7 @@ function HeroSection() {
       </div>
       <div className="ve-hero-image">
         <img
-          src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+          src={HeroImg}
           alt="Virtual Reality"
         />
       </div>
