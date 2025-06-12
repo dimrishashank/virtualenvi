@@ -1,0 +1,65 @@
+
+
+.intro-animation-stack {
+  width: 100vw;
+  min-height: 200vh; /* enough for both sections */
+  background: #000;
+}
+
+.landing-intro {
+  width: 100vw;
+  height: 100vh;
+  background: #040A21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-content {
+  text-align: center;
+}
+
+.landing-content h1 {
+  color: #fff;
+  font-size: 6vw;
+  font-weight: bold;
+  text-shadow: 4px 4px 10px #00baff;
+  margin-bottom: 40px;
+}
+
+.arrow {
+  cursor: pointer;
+  margin-top: 40px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(20px);}
+}
+
+.video-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.intro-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Hide scrollbar for all browsers */
+body, html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
