@@ -8,7 +8,7 @@ function Footer() {
           <div>
             <h4>Navigation</h4>
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="#" role="button" tabIndex="0">Home</a></li>
               <li><a href="#">Blogs</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
@@ -17,10 +17,10 @@ function Footer() {
           <div>
             <h4>Legal</h4>
             <ul>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Sitemap</a></li>
-              <li><a href="#">Security Regulations</a></li>
+              <li><a href="#!">Terms of Use</a></li>
+              <li><a href="#!">Privacy Policy</a></li>
+              <li><a href="#!">Sitemap</a></li>
+              <li><a href="#!">Security Regulations</a></li>
             </ul>
           </div>
           <div className="ve-footer-contact-btn">
@@ -37,10 +37,10 @@ function Footer() {
             All Rights Reserved
           </div>
           <div className="ve-footer-socials">
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
-            <a href="#"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" /></a>
+            <a href="#!"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+            <a href="#!"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+            <a href="#!"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X" /></a>
+            <a href="#!"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" /></a>
           </div>
         </div>
       </div>
