@@ -4,7 +4,7 @@ const WhyChooseSection = () => {
   const features = [
     {
       title: "Reality Meets Imagination",
-      description: "Moyotopia bridges the physical and digital worlds through VirtuaEnvi—delivering ultra-realistic interactive environments inspired by real-life locations.",
+      description: "Mayatopia bridges the physical and digital worlds through VirtuaEnvi—delivering ultra-realistic interactive environments inspired by real-life locations.",
       icon: "🌐"
     },
     {
@@ -19,12 +19,12 @@ const WhyChooseSection = () => {
     },
     {
       title: "Built for Connection",
-      description: "Advanced voice chat and avatar systems power authentic interactions and community events—bringing people together in immersive spaces.",
+      description: "Advanced voice, chat, and avatar systems power authentic interactions and community events—bringing people together in immersive spaces.",
       icon: "👥"
     },
     {
       title: "Scalable & Future-Ready",
-      description: "With a roadmap spanning VR, AI, and international partnerships, Moyotopia is built for longevity and growth potential in the evolving metaverse landscape.",
+      description: "With a roadmap spanning VR, AI, and international partnerships, Mayatopia is built for longevity and growth potential in the evolving metaverse landscape.",
       icon: "📈"
     },
     {
@@ -36,10 +36,13 @@ const WhyChooseSection = () => {
 
   return (
     <section className="why-choose-section">
+      <div className="whychoose-section-title">
+        <h2>Why Choose Mayatopia</h2>
+      </div>
       <div className="why-choose-grid">
         {features.map((feature, index) => (
           <div key={index} className="feature-card">
-            <span className="feature-icon">{feature.icon}</span>
+            <div className="feature-icon">{feature.icon}</div>
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
           </div>
