@@ -74,9 +74,9 @@ body {
 .ve-nav {
   display: flex;
   flex: 1;
-  justify-content: flex-end;  /* Changed from space-between */
+  justify-content: flex-end;  
   align-items: center;
-  gap: 60px;  /* Added gap property to control spacing */
+  gap: 60px;  
 }
 
 .ve-nav a {
@@ -85,7 +85,7 @@ body {
   font-size: 1.3rem;
   font-weight: 500;
   transition: color 0.2s;
-  margin: 0;  /* Remove margin */
+  margin: 0;  
   text-align: center;
 }
 
