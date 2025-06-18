@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import EllipseBackground from './components/EllipseBackground';
 import IntroAnimation from './components/IntroAnimation/IntroAnimation';
 import WhatWeOfferSection from './components/WhatWeOfferSection';
+import WhyChooseSection from './components/WhyChooseSection';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -30,6 +31,7 @@ function App() {
           <MissionSection />
           <FounderSection />
           <WhatWeOfferSection />
+          <WhyChooseSection />
           <BlogCardsSection />
           <Footer />
         </>

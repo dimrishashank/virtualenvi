@@ -618,16 +618,74 @@ body {
   background: #c1e3f1;
 }
 
-/* Responsive tweaks if needed */
-/* @media (max-width: 900px) {
-  .ellipse-mission-left,
-  .ellipse-mission-right,
-  .ellipse-mission-below-left {
-    width: 160px;
-    height: 160px;
-    top: unset;
-    left: unset;
-    right: unset;
+/* Why Choose Section */
+.why-choose-section {
+  padding: 100px 64px;
+  background-image: url('./assets/whychoosebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.why-choose-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 10, 33, 0.85);
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.feature-card h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
   }
-} */
+  
+  .why-choose-section {
+    padding: 60px 24px;
+  }
+}
 
