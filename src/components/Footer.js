@@ -8,19 +8,19 @@ function Footer() {
           <div>
             <h4>Navigation</h4>
             <ul>
-              <li><a href="#" role="button" tabIndex="0">Home</a></li>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="/" role="button" tabIndex="0">Home</a></li>
+              <li><a href="/blogs">Blogs</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
           <div>
             <h4>Legal</h4>
             <ul>
-              <li><a href="#!">Terms of Use</a></li>
-              <li><a href="#!">Privacy Policy</a></li>
-              <li><a href="#!">Sitemap</a></li>
-              <li><a href="#!">Security Regulations</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/sitemap">Sitemap</a></li>
+              <li><a href="/security">Security Regulations</a></li>
             </ul>
           </div>
           <div className="ve-footer-contact-btn">

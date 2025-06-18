@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Logo.png'; // Adjust path if needed
+import Logo from '../assets/Logo.png';
 
 function Header() {
   return (
@@ -8,10 +8,10 @@ function Header() {
         <img src={Logo} alt="VirtualEnvi Logo" style={{ height: '60px' }} />
       </div>
       <nav className="ve-nav">
-        <a href="#">Home</a>
-        <a href="#">Blogs</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="/">Home</a>
+        <a href="/blogs">Blogs</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact Us</a>
       </nav>
     </header>
   );
