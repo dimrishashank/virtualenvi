@@ -9,6 +9,7 @@ import BlogCardsSection from './components/BlogCardsSection';
 import Footer from './components/Footer';
 import EllipseBackground from './components/EllipseBackground';
 import IntroAnimation from './components/IntroAnimation/IntroAnimation';
+import WhatWeOfferSection from './components/WhatWeOfferSection';
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -28,7 +29,7 @@ function App() {
           <HeroSection />
           <MissionSection />
           <FounderSection />
-          <TeamSection />
+          <WhatWeOfferSection />
           <BlogCardsSection />
           <Footer />
         </>
