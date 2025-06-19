@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="ve-footer">
       <div className="ve-footer-main">
@@ -24,7 +32,7 @@ function Footer() {
             </ul>
           </div>
           <div className="ve-footer-contact-btn">
-            <button>Contact Us</button>
+            <button onClick={handleContactClick}>Contact Us</button>
           </div>
         </div>
         <div className="ve-footer-info">

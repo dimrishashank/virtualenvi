@@ -1,13 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ArushiImg from '../assets/Arushi_img.png';
 
 function FounderSection() {
+  const navigate = useNavigate();
+
+  const handleReadMore = (e) => {
+    e.preventDefault();
+    navigate('/about');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <section className="ve-founder">
       <div className="ve-founder-info">
         <h2>Our Founder</h2>
         <p>
-          <strong>Meet Aarushi</strong>, the visionary behind our metaverse startup. Currently a student at the University of Petroleum and Energy Studies (UPES), Aarushi is pursuing a career as a DevSecOps Engineer. With a passion for design and a long-standing dream of establishing her own studio, she combines technical expertise with creative flair to lead our innovative journey into the metaverse. <a href="https://your-link-here.com" className="ve-founder-read-more" target="_blank" rel="noopener noreferrer">Read More.</a>
+          <strong>Meet Aarushi</strong>, the visionary behind our metaverse startup. Currently a student at the University of Petroleum and Energy Studies (UPES), Aarushi is pursuing a career as a DevSecOps Engineer. With a passion for design and a long-standing dream of establishing her own studio, she combines technical expertise with creative flair to lead our innovative journey into the metaverse. <a href="/about" className="ve-founder-read-more" onClick={handleReadMore}>Read More.</a>
         </p>
         <div className="ve-founder-socials">
           <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

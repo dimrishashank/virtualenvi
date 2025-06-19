@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import bgImage from '../assets/qspwrsh7.png';
 
 const WhatWeOfferSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const img = new Image();
     img.src = bgImage;
     img.onload = () => setIsLoaded(true);
   }, []);
+
+  const handleLearnMore = () => {
+    navigate('/about');
+    window.scrollTo(0, 0); // Add this line to scroll to top
+  };
 
   return (
     <div 
@@ -32,7 +39,12 @@ const WhatWeOfferSection = () => {
             digital platform
           </p>
         </div>
-        <button className="learn-more-btn">Learn More</button>
+        <button 
+          className="learn-more-btn" 
+          onClick={handleLearnMore}
+        >
+          Learn More
+        </button>
       </div>
     </div>
   );
