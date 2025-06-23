@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Footer() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const handleContactClick = () => {
   //   navigate('/contact');
