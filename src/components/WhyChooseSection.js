@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import bgVideo from '../assets/WhyChooseMayatopiaVideo.mp4';
 
 const WhyChooseSection = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.querySelector('.why-choose-section');
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top;
+      const scrollPercentage = (window.innerHeight - sectionTop) / (window.innerHeight + rect.height);
+      
+      // Reverse the scroll direction by using negative scrollPercentage
+      if (scrollPercentage >= 0 && scrollPercentage <= 1) {
+        setScrollPosition(-scrollPercentage);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const features = [
     {
       title: "Reality Meets Imagination",
@@ -36,6 +56,20 @@ const WhyChooseSection = () => {
 
   return (
     <section className="why-choose-section">
+      <div className="video-container">
+        <video
+          className="why-choose-video-bg"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            transform: `translate(-50%, -50%) scale(1.2) translateX(${scrollPosition * -100}px)` 
+          }}
+        >
+          <source src={bgVideo} type="video/mp4" />
+        </video>
+      </div>
       <div className="whychoose-section-title">
         <h2>Why Choose Mayatopia</h2>
       </div>

@@ -31,9 +31,9 @@ function Footer() {
               <li><a href="/security">Security Regulations</a></li>
             </ul>
           </div>
-          <div className="ve-footer-contact-btn">
+          {/* <div className="ve-footer-contact-btn">
             <button onClick={handleContactClick}>Contact Us</button>
-          </div>
+          </div> */}
         </div>
         <div className="ve-footer-info">
           <div className="ve-footer-location">
