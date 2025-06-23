@@ -13,7 +13,7 @@ const WhyChooseSection = () => {
       
       // Reverse the scroll direction by using negative scrollPercentage
       if (scrollPercentage >= 0 && scrollPercentage <= 1) {
-        setScrollPosition(-scrollPercentage);
+        setScrollPosition(scrollPercentage);
       }
     };
 
