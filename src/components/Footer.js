@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 function Footer() {
   const navigate = useNavigate();
 
-  const handleContactClick = () => {
-    navigate('/contact');
-    window.scrollTo(0, 0);
-  };
+  // const handleContactClick = () => {
+  //   navigate('/contact');
+  //   window.scrollTo(0, 0);
+  // };
 
   return (
     <footer className="ve-footer">
