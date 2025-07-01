@@ -19,15 +19,37 @@ const WhyChooseSection = () => {
       }
     };
 
+    // Intersection Observer for reveal animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all reveal elements within this section
+    const revealElements = document.querySelectorAll('.why-choose-section .reveal-element');
+    revealElements.forEach((el) => observer.observe(el));
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      revealElements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
   const features = [
     {
       title: "Reality Meets Imagination",
       description: "Mayatopia bridges the physical and digital worlds through VirtuaEnvi—delivering ultra-realistic interactive environments inspired by real-life locations.",
-      icon: "🌏",
+      icon: "🌐",
       isEmoji: true,
       animationClass: "emoji-rotate"
     },
@@ -82,12 +104,12 @@ const WhyChooseSection = () => {
           <source src={bgVideo} type="video/mp4" />
         </video>
       </div>
-      <div className="whychoose-section-title">
+      <div className="whychoose-section-title reveal-element fade-down">
         <h2>Why Choose Mayatopia</h2>
       </div>
       <div className="why-choose-grid">
         {features.map((feature, index) => (
-          <div key={index} className="feature-card">
+          <div key={index} className={`feature-card reveal-element fade-up delay-stagger delay-${(index + 1) * 100}`}>
             <div className={`feature-icon ${feature.isEmoji ? feature.animationClass : ''}`}>
               {feature.isEmoji ? (
                 <span style={{fontSize: '2rem'}}>{feature.icon}</span>

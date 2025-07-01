@@ -1040,6 +1040,133 @@ body {
   box-shadow: 0 15px 50px rgba(0, 230, 255, 0.25);
 }
 
+/* ...existing code... */
+
+/* Enhanced Reveal Animations */
+.reveal-element {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+}
+
+.reveal-element.fade-up {
+  transform: translateY(60px);
+}
+
+.reveal-element.fade-down {
+  transform: translateY(-60px);
+}
+
+.reveal-element.fade-left {
+  transform: translateX(-60px);
+}
+
+.reveal-element.fade-right {
+  transform: translateX(60px);
+}
+
+.reveal-element.fade-bottom {
+  transform: translateY(50px);
+}
+
+.reveal-element.scale-up {
+  transform: scale(0.8);
+}
+
+.reveal-element.rotate-in {
+  transform: rotate(-10deg) scale(0.8);
+}
+
+.reveal-element.reveal {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0) scale(1) rotate(0);
+}
+
+/* Animation Delays */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.delay-500 {
+  transition-delay: 0.5s;
+}
+
+.delay-600 {
+  transition-delay: 0.6s;
+}
+
+/* Step Into Section Animations */
+.step-into-title.reveal-element {
+  transition-duration: 1.2s;
+}
+
+.step-into-features.reveal-element {
+  transition-duration: 1s;
+}
+
+.feature-item.reveal-element {
+  transition-duration: 0.8s;
+}
+
+
+
+/* Mission Section Animation */
+.ve-mission.reveal-element {
+  transition-duration: 1s;
+}
+
+/* What We Offer Section Animation */
+.offer-content.reveal-element {
+  transition-duration: 1s;
+}
+
+.offer-title.reveal-element {
+  transition-delay: 0.2s;
+}
+
+.offer-description.reveal-element {
+  transition-delay: 0.4s;
+}
+
+.learn-more-btn.reveal-element {
+  transition-delay: 0.6s;
+}
+
+/* Enhanced Hover Effects for Revealed Elements */
+.reveal-element.reveal:hover {
+  transform: translateY(-2px) scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Smooth entrance for emoji animations */
+.emoji-rotate.reveal-element.reveal,
+.emoji-bounce.reveal-element.reveal,
+.emoji-pulse.reveal-element.reveal,
+.emoji-swing.reveal-element.reveal {
+  animation-play-state: running;
+}
+
+.emoji-rotate.reveal-element:not(.reveal),
+.emoji-bounce.reveal-element:not(.reveal),
+.emoji-pulse.reveal-element:not(.reveal),
+.emoji-swing.reveal-element:not(.reveal) {
+  animation-play-state: paused;
+}
+
+
 /* About Mission Section */
 .about-mission-section {
   position: relative;
