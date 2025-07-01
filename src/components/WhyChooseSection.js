@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import bgVideo from '../assets/WhyChooseMayatopiaVideo.mp4';
+import phoneGif from '../assets/GIF/icons8-phone.gif';
+import connectionGif from '../assets/GIF/icons8-connection.gif';
 
 const WhyChooseSection = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -25,32 +27,42 @@ const WhyChooseSection = () => {
     {
       title: "Reality Meets Imagination",
       description: "Mayatopia bridges the physical and digital worlds through VirtuaEnvi—delivering ultra-realistic interactive environments inspired by real-life locations.",
-      icon: "🌐"
+      icon: "🌏",
+      isEmoji: true,
+      animationClass: "emoji-rotate"
     },
     {
       title: "Mobile-First, India-Focused",
       description: "With a design optimized for mobile devices, VirtuaEnvi is built to reach and engage India's massive young, mobile-first population.",
-      icon: "📱"
+      icon: phoneGif,
+      isEmoji: false
     },
     {
       title: "Immersive Commerce & Culture",
       description: "From regional marketplaces to artistic showcases, we blend traditional elements with futuristic experiences—making shopping socializing and creating more meaningful.",
-      icon: "🛍️"
+      icon: "🛍️",
+      isEmoji: true,
+      animationClass: "emoji-bounce"
     },
     {
       title: "Built for Connection",
       description: "Advanced voice, chat, and avatar systems power authentic interactions and community events—bringing people together in immersive spaces.",
-      icon: "👥"
+      icon: connectionGif,
+      isEmoji: false
     },
     {
       title: "Scalable & Future-Ready",
       description: "With a roadmap spanning VR, AI, and international partnerships, Mayatopia is built for longevity and growth potential in the evolving metaverse landscape.",
-      icon: "📈"
+      icon: "📈",
+      isEmoji: true,
+      animationClass: "emoji-pulse"
     },
     {
       title: "Web3 & NFT Integration",
       description: "Leverage blockchain technology for true digital ownership, decentralized commerce, and community-driven ecosystems within the metaverse.",
-      icon: "🔗"
+      icon: "🔗",
+      isEmoji: true,
+      animationClass: "emoji-swing"
     }
   ];
 
@@ -76,7 +88,13 @@ const WhyChooseSection = () => {
       <div className="why-choose-grid">
         {features.map((feature, index) => (
           <div key={index} className="feature-card">
-            <div className="feature-icon">{feature.icon}</div>
+            <div className={`feature-icon ${feature.isEmoji ? feature.animationClass : ''}`}>
+              {feature.isEmoji ? (
+                <span style={{fontSize: '2rem'}}>{feature.icon}</span>
+              ) : (
+                <img src={feature.icon} alt={feature.title} style={{width: '2rem', height: '2rem'}} />
+              )}
+            </div>
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
           </div>

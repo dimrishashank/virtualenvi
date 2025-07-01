@@ -12,7 +12,6 @@ function Footer() {
       <div className="ve-footer-main">
         <div className="ve-footer-links">
           <div>
-            <h4>Navigation</h4>
             <ul>
               <li><a href="/" role="button" tabIndex="0">Home</a></li>
               <li><a href="/blogs">Blogs</a></li>
@@ -21,7 +20,6 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h4>Legal</h4>
             <ul>
               <li><a href="/terms">Terms of Use</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
@@ -39,7 +37,7 @@ function Footer() {
             Dehradun, Uttarakhand, India
           </div>
           <div className="ve-footer-copyright">
-            © 2024 | Virtual Envi Pvt Ltd<br />
+            © 2025 | Mayatopia Pvt Ltd<br />
             All Rights Reserved
           </div>
           <div className="ve-footer-socials">
