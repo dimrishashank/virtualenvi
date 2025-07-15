@@ -6,6 +6,7 @@ import VRHeadset from '../../assets/animation/image 3.png';
 
 const IntroAnimation = ({ onAnimationComplete }) => {
   const [stage, setStage] = useState(1);
+  const [showArrow, setShowArrow] = useState(false);
 
   // VR Headset animation with different speeds for initial and zoom phases
   const headsetAnimation = useSpring({
@@ -25,6 +26,9 @@ const IntroAnimation = ({ onAnimationComplete }) => {
       tension: stage === 3 ? 180 : 60,
       friction: stage === 3 ? 8 : 15,
       duration: stage === 3 ? 800 : undefined
+    },
+    onRest: () => {
+      if (stage === 1) setShowArrow(true);
     }
   });
 
@@ -61,24 +65,33 @@ const IntroAnimation = ({ onAnimationComplete }) => {
     }
   });
 
-  useEffect(() => {
-    const timer1 = setTimeout(() => setStage(2), 2500);    // Logo appears
-    const timer2 = setTimeout(() => setStage(3), 3500);    // Start zoom
-    const timer3 = setTimeout(() => setStage(4), 5000);    // Final transition
-    const timer4 = setTimeout(() => setStage(5), 5800);    // Text reveal
-    const timer5 = setTimeout(() => onAnimationComplete(), 8800); // Extended pause by 3 seconds
+  // Handle scroll or click to continue
+  const handleContinue = () => {
+    setShowArrow(false);
+    setStage(2);
+    const timer2 = setTimeout(() => setStage(3), 1000);
+    const timer3 = setTimeout(() => setStage(4), 2500);
+    const timer4 = setTimeout(() => setStage(5), 3300);
+    const timer5 = setTimeout(() => onAnimationComplete(), 6300);
 
     return () => {
-      clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
       clearTimeout(timer4);
       clearTimeout(timer5);
     };
+  };
+
+  // Initial appearance only
+  useEffect(() => {
+    const timer1 = setTimeout(() => setStage(1), 100);
+    return () => clearTimeout(timer1);
   }, []);
 
   return (
-    <div className="intro-animation">
+    <div className="intro-animation" onWheel={(e) => {
+      if (showArrow && e.deltaY > 0) handleContinue();
+    }}>
       <div className="animation-container">
         <animated.div style={headsetAnimation} className="headset-container">
           <img src={VRHeadset} alt="VR Headset" className="vr-headset" />
@@ -91,6 +104,12 @@ const IntroAnimation = ({ onAnimationComplete }) => {
         <animated.div style={textAnimation} className="text-container">
           <span className="brand-text">Mayatopia</span>
         </animated.div>
+
+        {showArrow && (
+          <div className="continue-arrow" onClick={handleContinue}>
+            <span className="arrow-down"></span>
+          </div>
+        )}
       </div>
     </div>
   );
