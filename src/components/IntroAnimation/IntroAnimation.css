@@ -155,27 +155,54 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 /* Responsive Logo Container */
 @media (max-width: 768px) {
   .logo-container {
-    width: 150px;
+    width: 130px;
+    top: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .logo-container {
-    width: 120px;
+    width: 100px;
+    top: 52%;
   }
+  
+  /* Hide logo initially on mobile, show with significant delay */
+  .logo {
+    opacity: 0;
+    animation: showLogoMobile 0.8s ease-in-out 5s forwards;
+  }
+}
+
+@keyframes showLogoMobile {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .text-container {
   position: absolute;
-  top: 44%; /* Moved up by 1% */
+  top: 44%;
   left: 50%;
   z-index: 2;
   opacity: 0;
   transform: translate(0%, -50%);
   display: flex;
   align-items: center;
-  gap: 30px; /* Space between logo and text */
+  gap: 30px;
   will-change: transform, opacity, filter;
+}
+
+@media (max-width: 768px) {
+  .text-container {
+    top: 49%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container {
+    top: 51%;
+    gap: 15px;
+  }
 }
 
 .logo {
@@ -203,20 +230,20 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
 /* Responsive Brand Text */
 @media (max-width: 1024px) {
   .brand-text {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .brand-text {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 1px;
   }
 }
 
 @media (max-width: 480px) {
   .brand-text {
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 0.5px;
   }
 }
