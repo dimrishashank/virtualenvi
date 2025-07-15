@@ -26,6 +26,21 @@
   margin-bottom: 40px;
 }
 
+/* Responsive Landing Content */
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 8vw;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-content h1 {
+    font-size: 10vw;
+    margin-bottom: 20px;
+  }
+}
+
 .arrow {
   cursor: pointer;
   margin-top: 40px;
@@ -104,6 +119,25 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   transition: opacity 0.8s ease;
 }
 
+/* Responsive VR Headset */
+@media (max-width: 1024px) {
+  .vr-headset {
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vr-headset {
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vr-headset {
+    width: 320px;
+  }
+}
+
 .logo-container {
   position: absolute;
   top: 45%;
@@ -116,6 +150,19 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   align-items: center;
   transform: translate(-50%, -50%);
   will-change: transform, opacity;
+}
+
+/* Responsive Logo Container */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 120px;
+  }
 }
 
 .text-container {
@@ -146,10 +193,32 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
   letter-spacing: 2px;
   background: linear-gradient(to right, #ffffff, #e0e0e0);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Arial', sans-serif;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Added smooth transition */
+}
+
+/* Responsive Brand Text */
+@media (max-width: 1024px) {
+  .brand-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
 }
 
 .continue-arrow {
