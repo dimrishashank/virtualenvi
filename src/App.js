@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Product from './pages/Product';
 import IntroAnimation from './components/IntroAnimation/IntroAnimation';
 import './App.css';
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Product />} />
           </Routes>
         )}
       </div>

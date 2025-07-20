@@ -44,6 +44,7 @@ function Header() {
 
       <nav className={`ve-nav ${isMenuOpen ? 'active' : ''}`}>
         <a href="/about" onClick={closeMenu}>About Us</a>
+        <a href="/products" onClick={closeMenu}>Products</a>
         <a href="/blogs" onClick={closeMenu}>Blogs</a>
         <a href="/contact" onClick={closeMenu}>Contact Us</a>
       </nav>
