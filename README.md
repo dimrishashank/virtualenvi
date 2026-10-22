@@ -17,6 +17,10 @@ Explore the deployed platform: **[virtualenvi.netlify.app](https://virtualenvi.n
 
 ## ✨ Features & Architecture
 
+<p align="center">
+  <img src="assets/graphics/virtualenvi-architecture.svg" alt="VirtualEnvi Frontend Component and Motion Architecture" width="100%"/>
+</p>
+
 - **Mobile-First Responsive Layout:** Custom media queries and flexible grid layouts tailored for optimal viewports across phones, tablets, and desktop displays.
 - **Declarative Animation Pipelines:** Utilizes Framer Motion components (`motion.div`, variants, and gesture controls) for high-performance physics-based micro-interactions.
 - **Component-Driven Composition:** Structured UI components separating layout containers, dynamic modal dialogs, and reusable presentation blocks.
